@@ -28,6 +28,7 @@ function checkKeyDown(key){
     if (key.keyCode === 32){ // Check if the key is the spacebar
         window.clearInterval(interval);
         if (running){
+            let time = milliseconds + 1000*seconds + 60000*minutes + 3600000*hours;
             /*TODO:
             *  write time to text file
             */
