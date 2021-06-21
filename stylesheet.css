@@ -3,9 +3,16 @@
     width: 100%;
 }
 
+#scramble{
+    width: 100%;
+    font-size: 42px;
+    text-align: center;
+    margin: 0px auto;
+}
+
 #display{
     width: 100%;
-    font-size: 72px;
+    font-size: 96px;
     text-align: center;
     margin: 0px auto;
 }

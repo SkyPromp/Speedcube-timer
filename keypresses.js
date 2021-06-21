@@ -34,10 +34,11 @@ function checkKeyDown(key){
             let time = milliseconds + 1000*seconds + 60000*minutes + 3600000*hours;
 
             fetch(`cgi-bin/transfer.cgi?scramble=&time=`)
-            .then(antwoord => antwoord.json()) // convert response to json
+            .then(response => response.json()) // convert response to json
             .then(data => {
                 scramble = data["scramble"];
             });
+            document.getElementById("scramble").innerHTML = scramble
         }
     }
 }
