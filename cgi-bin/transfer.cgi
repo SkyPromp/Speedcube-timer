@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 import json
 import cgi
-from scrambler import getScramble
+from scrambler import scramble
 from filewriter import write
 
 # Read data sent by Javascript
 parameters = cgi.FieldStorage(keep_blank_values=1)
 
 time = parameters.getvalue('time')
-scramble = parameters.getvalue('scramble')
+old_scramble = parameters.getvalue('scramble')
 
 # Write data to file and get new scramble
-write(scramble, time)
+write(old_scramble, time)
 
-new_data = getScramble()
+new_data = scramble(25)
 
 # Return response
 print("Content-Type: application/json")
