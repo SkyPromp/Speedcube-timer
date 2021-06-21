@@ -33,7 +33,7 @@ function checkKeyDown(key){
         window.clearInterval(interval);
         if (running){
             time = milliseconds + 1000*seconds + 60000*minutes + 3600000*hours;
-            fetch(`cgi-bin/transfer.cgi?scramble=&time=`)
+            fetch(`cgi-bin/transfer.cgi?scramble=${scramble}&time=${time}`)
             .then(response => response.json()) // convert response to json
             .then(data => {
                 scramble = data;
