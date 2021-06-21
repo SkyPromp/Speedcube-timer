@@ -23,8 +23,5 @@ window.addEventListener("keydown", checkKeyDown, false); // Listens for key rele
 function checkKeyDown(key){
     if (key.keyCode === 32){ // Check if the key is the spacebar
         window.clearInterval(interval);
-        if (running){
-            running = true;
-        }
     }
 }
