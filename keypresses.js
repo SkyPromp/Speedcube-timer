@@ -1,8 +1,9 @@
 // Define variable to check if the timer is running
 let running = false;
 
-// Define empty scrable
+// Define empty scramble
 let scramble = "";
+let time = 0;
 
 window.addEventListener("keyup", checkKeyUp, false); // Listens for key releases and calls checkKeyUp function
 
@@ -31,12 +32,11 @@ function checkKeyDown(key){
     if (key.keyCode === 32){ // Check if the key is the spacebar
         window.clearInterval(interval);
         if (running){
-            let time = milliseconds + 1000*seconds + 60000*minutes + 3600000*hours;
-
+            time = milliseconds + 1000*seconds + 60000*minutes + 3600000*hours;
             fetch(`cgi-bin/transfer.cgi?scramble=&time=`)
             .then(response => response.json()) // convert response to json
             .then(data => {
-                scramble = data["scramble"];
+                scramble = data;
             });
             document.getElementById("scramble").innerHTML = scramble
         }
