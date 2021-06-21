@@ -38,4 +38,3 @@ function stopwatch(){
         document.getElementById("display").innerHTML = `${seconds}.${zeroPad(milliseconds, 3)}`;
     }
 }
-
