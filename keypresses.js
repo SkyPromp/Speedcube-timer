@@ -20,9 +20,10 @@ function checkKeyUp(key){
             running = false;
         }
     } else if (key.keyCode === 82){ // Check if the key is r
-        /*TODO:
-        *  remove newest line from text file
-        */
+            fetch(`cgi-bin/removeLL.cgi?`)
+            .then(response => response.json()) // convert response to json
+            .then(data => console.log("last line removed")
+            );
     }
 }
 

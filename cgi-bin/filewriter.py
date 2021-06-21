@@ -14,8 +14,9 @@ def remove():
     r = file.read()
     file.close()
     m = r.split("\n")
-    s = "\n".join(m[:-2])  # remove last 2 lines (last line is \n)
-    s += "\n"
+    s = "\n".join(m[:-2]) + "\n"  # remove last 2 lines (last line is \n)
+    if len(s) == 1:
+        s = ""
     file = open("times.txt", "w+")
     for i in range(len(s)):
         file.write(s[i])
