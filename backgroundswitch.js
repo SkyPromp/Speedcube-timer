@@ -9,4 +9,5 @@ function nextBackground() {
 function nextColor() {
     let colors = ["black", "white"];
     document.querySelector("body").style.color = colors[++colorIndex % colors.length];
+    document.getElementById("settings").src = `img/settings ${colors[colorIndex % colors.length]}.png`
 }
