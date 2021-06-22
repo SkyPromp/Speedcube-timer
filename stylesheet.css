@@ -1,29 +1,29 @@
-body{
+body {
     background-color: #efefef;
     background-image: url("img/backgrounds/gplaypattern.png");
     font-family: Segoe UI, serif;
     font-weight: bold;
 }
 
-.container{
+.container {
     height: 300px;
     width: 100%;
 }
 
-.menu-button{
+.menu-button {
     height: 56px;
     width: 56px;
     float: right;
     cursor: pointer;
 }
 
-.right-menu{
+.right-menu {
     position: relative;
     display: inline-block;
     float: right;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -33,34 +33,34 @@ body{
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 2);
 }
 
-.dropdown-menu a{
+.dropdown-menu a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-menu a:hover{
+.dropdown-menu a:hover {
     background-color: black;
     color: white;
 }
 
-.right-menu:hover .dropdown-menu{
+.right-menu:hover .dropdown-menu {
     display: block;
 }
 
-.right-menu:hover .menu-button{
+.right-menu:hover .menu-button {
     background-color: transparent;
 }
 
-#scramble{
+#scramble {
     width: 100%;
     font-size: 42px;
     text-align: center;
     margin: 30px auto;
 }
 
-#display{
+#display {
     width: 100%;
     font-size: 240px;
     text-align: center;

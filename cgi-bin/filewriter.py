@@ -21,5 +21,3 @@ def remove():
     for i in range(len(s)):
         file.write(s[i])
     file.close()
-
-
