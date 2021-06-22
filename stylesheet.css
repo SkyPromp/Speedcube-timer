@@ -1,5 +1,6 @@
 body{
-    background: #efefef;
+    background-color: #efefef;
+    background-image: url("img/backgrounds/gplaypattern.png");
     font-family: Segoe UI, serif;
     font-weight: bold;
 }
@@ -56,12 +57,12 @@ body{
     width: 100%;
     font-size: 42px;
     text-align: center;
-    margin: 0 auto;
+    margin: 30px auto;
 }
 
 #display{
     width: 100%;
-    font-size: 96px;
+    font-size: 240px;
     text-align: center;
-    margin: 0 auto;
+    margin: 300px auto;
 }
