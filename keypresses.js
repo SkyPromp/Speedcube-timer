@@ -12,7 +12,7 @@ fetch(`cgi-bin/transfer.cgi?scramble=&time=`)
 
 fetch(`cgi-bin/removeLL.cgi?`)
     .then(response => response.json()) // convert response to json
-    .then(e => console.log("last line removed")
+    .then(() => console.log("last line removed")
     );
 
 
@@ -36,7 +36,7 @@ function checkKeyUp(key) {
     } else if (key.keyCode === 82) { // Check if the key is r
         fetch(`cgi-bin/removeLL.cgi?`)
             .then(response => response.json()) // convert response to json
-            .then(e => console.log("last line removed")
+            .then(() => console.log("last line removed")
             );
     }
 }
