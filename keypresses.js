@@ -3,18 +3,12 @@ let scramble = "";
 let time = 0;
 
 // Get starting scramble
-fetch(`cgi-bin/transfer.cgi?scramble=&time=`)
+fetch(`cgi-bin/transfer.cgi?scramble=&time=&scrambleLength=25`)
     .then(response => response.json()) // convert response to json
     .then(data => {
         scramble = data
         document.getElementById("scramble").innerHTML = data
     });
-
-fetch(`cgi-bin/removeLL.cgi?`)
-    .then(response => response.json()) // convert response to json
-    .then(() => console.log("last line removed")
-    );
-
 
 // Define variable to check if the timer is running
 let running = false;
@@ -48,13 +42,21 @@ function checkKeyDown(key) {
         window.clearInterval(interval);
         if (running) {
             time = milliseconds + 1000 * seconds + 60000 * minutes + 3600000 * hours;
-            fetch(`cgi-bin/transfer.cgi?scramble=${scramble}&time=${time}`)
+            fetch(`cgi-bin/transfer.cgi?scramble=${scramble}&time=${time}&scrambleLength=${document.getElementById("scrambleLength").value}`)
                 .then(response => response.json()) // convert response to json
                 .then(data => {
                     scramble = data;
                     document.getElementById("scramble").innerHTML = scramble
                 });
-
         }
     }
+}
+
+function updateScramble(){
+    fetch(`cgi-bin/transfer.cgi?scramble=&time=&scrambleLength=${document.getElementById("scrambleLength").value}`)
+    .then(response => response.json()) // convert response to json
+    .then(data => {
+        scramble = data
+        document.getElementById("scramble").innerHTML = data
+    });
 }

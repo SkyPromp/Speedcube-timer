@@ -9,11 +9,13 @@ parameters = cgi.FieldStorage(keep_blank_values=1)
 
 time = parameters.getvalue('time')
 old_scramble = parameters.getvalue('scramble')
+scrambleLength = parameters.getvalue('scrambleLength')
 
 # Write data to file and get new scramble
-write(old_scramble, time)
+if old_scramble != "" and time != "":
+    write(old_scramble, time)
 
-new_data = scramble(25)
+new_data = scramble(int(scrambleLength))
 
 # Return response
 print("Content-Type: application/json")
