@@ -17,4 +17,10 @@ def scramble(length):
         else:
             out.append(random.choice(list(set(rl_moves).union(set(fb_moves)))))
 
-    return " ".join(out)
+    for i in range(1, 1 + (len(out) // 15)):
+        out.insert(i*15 + i - 1, "\n")
+
+    return " ".join(out).replace("\n ", "\n")
+
+
+print(scramble(25))

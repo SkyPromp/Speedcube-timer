@@ -46,7 +46,7 @@ function checkKeyDown(key) {
                 .then(response => response.json()) // convert response to json
                 .then(data => {
                     scramble = data;
-                    document.getElementById("scramble").innerHTML = scramble
+                    document.getElementById("scramble").innerHTML = scramble;
                 });
         }
     }
@@ -56,7 +56,12 @@ function updateScramble(){
     fetch(`cgi-bin/transfer.cgi?scramble=&time=&scrambleLength=${document.getElementById("scrambleLength").value}`)
     .then(response => response.json()) // convert response to json
     .then(data => {
-        scramble = data
-        document.getElementById("scramble").innerHTML = data
+        scramble = data;
+        document.getElementById("scramble").innerHTML = data;
+        if (Number((scramble.match(/\n/g) || []).length) > 5){
+            document.getElementById("display").style.position = "relative";
+        } else {
+            document.getElementById("display").style.position = "fixed";
+        }
     });
 }
