@@ -52,8 +52,9 @@ function checkKeyDown(key) {
                 .then(response => response.json()) // convert response to json
                 .then(data => {
                     scramble = data;
+                    document.getElementById("scramble").innerHTML = scramble
                 });
-            document.getElementById("scramble").innerHTML = scramble
+
         }
     }
 }
