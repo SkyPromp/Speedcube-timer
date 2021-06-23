@@ -16,10 +16,13 @@
     <div class="right-menu">
         <img id="settings" class="menu-button" src="img/settings black.png" alt="Settings">
         <div class="dropdown-menu">
-            <a href="#">Scramble length</a>
-            <a href="#" onclick="nextBackground()">Background color/theme</a>
-            <a href="#" onclick="nextColor()">Text color</a>
-            <a href="#">Timestep of timer</a>
+            <!--<h4 id="SL">Scramble length</h4>-->
+            <div class="setScrambleLength">
+                <label id="ScrambleLengthLabel" for="scrambleLength">Scramble length: </label><input type="text" id="scrambleLength" value="25">
+            </div>
+            <h4 onclick="nextBackground()">Background color/theme</h4>
+            <h4 onclick="nextColor()">Text color</h4>
+            <h4>Timestep of timer</h4>
         </div>
     </div>
     <div id="scramble"></div>
