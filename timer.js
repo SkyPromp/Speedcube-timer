@@ -31,9 +31,9 @@ function stopwatch() {
 
     // Display time
     if (hours !== 0) {
-        document.getElementById("display").innerHTML = `${zeroPad(hours, 2)}:${zeroPad(minutes, 2)}:${seconds}.${zeroPad(milliseconds, 3)}`;
+        document.getElementById("display").innerHTML = `${hours}:${zeroPad(minutes, 2)}:${zeroPad(seconds, 2)}.${zeroPad(milliseconds, 3)}`;
     } else if (minutes !== 0) {
-        document.getElementById("display").innerHTML = `${zeroPad(minutes, 2)}:${seconds}.${zeroPad(milliseconds, 3)}`;
+        document.getElementById("display").innerHTML = `${minutes}:${zeroPad(seconds, 2)}.${zeroPad(milliseconds, 3)}`;
     } else {
         document.getElementById("display").innerHTML = `${seconds}.${zeroPad(milliseconds, 3)}`;
     }
