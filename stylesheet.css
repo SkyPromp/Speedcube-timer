@@ -5,6 +5,23 @@ body {
     font-weight: bold;
 }
 
+#statistics {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 36px;
+    width: 36px;
+}
+
+#home {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 36px;
+    width: 36px;
+}
+
+
 .container {
     height: 300px;
     width: 100%;
